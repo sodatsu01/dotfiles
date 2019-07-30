@@ -18,14 +18,8 @@ set showcmd
 set number
 " 現在の行を強調表示
 set cursorline
-" 現在の行を強調表示（縦）
-set cursorcolumn
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
-" インデントはスマートインデント
-set smartindent
-" ビープ音を可視化
-set visualbell
 " 括弧入力時の対応する括弧を表示
 set showmatch
 " ステータスラインを常に表示
@@ -48,7 +42,10 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
-
+" インデントはスマートインデント
+set smartindent
+"  改行時に前の行のインデントを継続する
+set autoindent
 
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
