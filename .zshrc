@@ -100,3 +100,6 @@ plugins=(git zsh-syntax-highlighting)
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
+
+# disable beep
+setopt no_beep
