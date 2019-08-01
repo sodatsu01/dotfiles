@@ -5,15 +5,10 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
-export LSCOLORS=exfxcxdxbxegedabagacad
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=01;34'
 
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
-
-# emacs 風キーバインドにする
-# bindkey -e
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -157,9 +152,10 @@ case ${OSTYPE} in
         #Mac用の設定
         export CLICOLOR=1
         alias ls='ls -G -F'
+        export LSCOLORS=exfxcxdxbxegedabagacad
         ;;
     linux*)
         #Linux用の設定
-        alias ls='ls -F --color=auto'
+        source ~/.zshrc.linux
         ;;
 esac
