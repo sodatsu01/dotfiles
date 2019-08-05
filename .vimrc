@@ -63,3 +63,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " 全ての数字を10進数として扱う
 set nrformats=
+
+" 色味系
+" ヴィジュアルモードを白抜き青背景にする
+hi Visual ctermfg=255 ctermbg=12
