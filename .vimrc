@@ -67,3 +67,5 @@ set nrformats=
 " 色味系
 " ヴィジュアルモードを白抜き青背景にする
 hi Visual ctermfg=255 ctermbg=12
+" 検索結果を白抜き青背景
+hi Search ctermfg=255 ctermbg=33
