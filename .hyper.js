@@ -12,7 +12,7 @@ module.exports = {
     fontSize: 18,
 
     // font family with optional fallbacks
-    fontFamily: 'ゆたぽん（コーディング）',
+    fontFamily: 'Yutapon coding Bold',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -31,34 +31,6 @@ module.exports = {
 
     // set to `true` (without backticks and without quotes) for blinking cursor
     cursorBlink: false,
-
-    // // color of the text
-    // foregroundColor: '#fff',
-
-    // // terminal background color
-    // // opacity is only supported on macOS
-    // backgroundColor: '#000',
-
-    // // terminal selection color
-    // selectionColor: 'rgba(248,28,229,0.3)',
-
-    // // border color (window, tabs)
-    // borderColor: '#333',
-
-    // custom CSS to embed in the main window
-    css: '',
-
-    // custom CSS to embed in the terminal window
-    termCSS: '',
-
-    // if you're using a Linux setup which show native menus, set to false
-    // default: `true` on Linux, `true` on Windows, ignored on macOS
-    showHamburgerMenu: '',
-
-    // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
-    // additionally, set to `'left'` if you want them on the left, like in Ubuntu
-    // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-    showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
     padding: '9px 12px',
@@ -85,25 +57,14 @@ module.exports = {
       lightCyan: '#68FDFE',
       lightWhite: '#FFFFFF',
     },
+    //if (navigator.platform.indexOf("Win") != -1) {
+      // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
+      //shell: 'C:\\Windows\\System32\\wsl.exe',
 
-    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
-    // if left empty, your system's login shell will be used by default
-    //
-    // Windows
-    // - Make sure to use a full path if the binary name doesn't work
-    // - Remove `--login` in shellArgs
-    //
-    // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
-    //
-    // PowerShell on Windows
-    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'C:\\Windows\\System32\\wsl.exe',
-
-    // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
-    // by default `['--login']` will be used
-    shellArgs: ['~'],
-
+      // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
+      // by default `['--login']` will be used
+      //shellArgs: ['~'],
+    //},
     // for environment variables
     env: {},
 
@@ -164,8 +125,4 @@ module.exports = {
   // to load it and avoid it being `npm install`ed
   localPlugins: [],
 
-  keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
-  },
 };
