@@ -34,7 +34,7 @@ module.exports = {
     cursorBlink: false,
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '9px 12px',
+    padding: '6px 12px',
     lineHeight: 1.1,
 
     // the full list. if you're going to provide the full color palette,

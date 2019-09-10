@@ -5,6 +5,11 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+export PATH=/usr/local/bin:$PATH
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -159,3 +164,4 @@ case ${OSTYPE} in
         source ~/.zshrc.linux
         ;;
 esac
+# eval "$(rbenv init -)"
