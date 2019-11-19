@@ -65,12 +65,18 @@ set hlsearch
 hi Visual ctermfg=255 ctermbg=12
 " 検索結果を白抜き青背景
 hi Search ctermfg=255 ctermbg=33
+" Errorの背景をMagenta
+hi Error cterm=bold ctermfg=255 ctermbg=9 guibg=Magenta
+hi MatchParen ctermfg=255 ctermbg=33
 
 " キーマップ
 " アクティブなファイルが含まれるディレクトリ展開
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%' 
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" 閉じ括弧の補完
+inoremap { {<Enter>}<ESC>kA
+inoremap ( (<Enter>)<ESC>kA
 
 " プラグイン
 runtime macros/matchit.vim

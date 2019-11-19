@@ -8,5 +8,6 @@
 	trustExitCode = true
 [user]
 	name = sodatsu01
+	email = darumasanga.korondaa@gmail.com
 [commit]
 	template = /Users/user/.stCommitMsg
