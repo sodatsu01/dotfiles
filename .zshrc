@@ -6,7 +6,6 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 export PATH=/usr/local/bin:$PATH
-export PATH=~/tools:$PATH
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -159,6 +158,7 @@ case ${OSTYPE} in
         export CLICOLOR=1
         alias ls='ls -G -F'
         export LSCOLORS=exfxcxdxbxegedabagacad
+        export PATH=~/tools:$PATH
         ;;
     linux*)
         #Linux用の設定
