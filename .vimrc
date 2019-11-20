@@ -75,8 +75,8 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 閉じ括弧の補完
-inoremap { {<Enter>}<ESC>kA
-inoremap ( (<Enter>)<ESC>kA
+inoremap { {}<ESC>i
+inoremap ( ()<ESC>i
 
 " プラグイン
 runtime macros/matchit.vim

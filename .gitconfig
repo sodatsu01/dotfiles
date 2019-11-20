@@ -11,3 +11,6 @@
 	email = darumasanga.korondaa@gmail.com
 [commit]
 	template = /Users/user/.stCommitMsg
+[alias]
+  initcom = commit --allow-empty -m \"initial commit\"
+  ss = status
