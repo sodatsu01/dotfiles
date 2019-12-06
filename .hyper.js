@@ -1,45 +1,22 @@
 // TODO MacとWindowsで設定が変わる部分をきれいにする
-// Future versions of Hyper may add additional config options,
-// which will not automatically be merged into this file.
-// See https://hyper.is#cfg for all currently supported options.
 
 module.exports = {
   config: {
-    // choose either `'stable'` for receiving highly polished,
-    // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
 
-    // default font size in pixels for all tabs
     fontSize: 18,
-
-    // font family with optional fallbacks
     fontFamily: 'Yutapon coding Bold',
-
-    // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
-
-    // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'bold',
 
-    // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
-
-    // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
-
-    // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
     cursorShape: 'BLOCK',
-
-    // set to `true` (without backticks and without quotes) for blinking cursor
     cursorBlink: false,
 
-    // custom padding (CSS format, i.e.: `top right bottom left`)
     padding: '6px 12px',
     lineHeight: 1.1,
 
-    // the full list. if you're going to provide the full color palette,
-    // including the 6 x 6 color cubes and the grayscale map, just provide
-    // an array here instead of a color map object
     colors: {
       black: '#000000',
       red: '#C51E14',
@@ -58,34 +35,14 @@ module.exports = {
       lightCyan: '#68FDFE',
       lightWhite: '#FFFFFF',
     },
-    //if (navigator.platform.indexOf("Win") != -1) {
-      // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-      //shell: 'C:\\Windows\\System32\\wsl.exe',
-
-      // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
-      // by default `['--login']` will be used
-      //shellArgs: ['~'],
-    //},
-    // for environment variables
     env: {},
 
-    // set to `false` for no bell
     bell: false,
 
-    // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: false,
 
-    // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
 
-    // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
-    // selection is present (`true` by default on Windows and disables the context menu feature)
-    // quickEdit: true,
-
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
-
-    // for advanced config flags please refer to https://hyper.is/#cfg
     overlay: {
       alwaysOnTop: true,
       animate: false,
@@ -109,21 +66,11 @@ module.exports = {
     }
   },
 
-  // a list of plugins to fetch and install from npm
-  // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
   plugins: [
     'hyper-iceberg',
     'hyperterm-overlay',
     'hyper-opacity',
   ],
-
-  // in development, you can create a directory under
-  // `~/.hyper_plugins/local/` and include it here
-  // to load it and avoid it being `npm install`ed
   localPlugins: [],
 
 };
