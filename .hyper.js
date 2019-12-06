@@ -49,7 +49,7 @@ module.exports = {
       hasShadow: false,
       hideDock: true,
       hideOnBlur: false,
-      hotkeys: ['alt+space', 'HOME'],
+      hotkeys: ['alt+space'],
       position: 'right',
       primaryDisplay: false,
       resizable: true,
@@ -64,13 +64,10 @@ module.exports = {
       focus: 0.85,
       blur: 0.65,
     }
+
   },
 
-  plugins: [
-    'hyper-iceberg',
-    'hyperterm-overlay',
-    'hyper-opacity',
-  ],
+  plugins: ['hyper-iceberg', 'hyperterm-overlay', 'hyper-opacity', ],
   localPlugins: [],
 
 };

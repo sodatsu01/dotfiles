@@ -6,6 +6,7 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 export PATH=/usr/local/bin:$PATH
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$PATH"
