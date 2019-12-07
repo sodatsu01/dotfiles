@@ -63,11 +63,29 @@ module.exports = {
     opacity: {
       focus: 0.85,
       blur: 0.65,
+    },
+
+    paneNavigation: {
+      debug: false,
+      hotkeys: {
+        navigation: {
+          up: 'ctrl+shift+k',
+          down: 'ctrl+shift+j',
+          left: 'ctrl+shift+h',
+          right: 'ctrl+shift+l'
+        },
+        jump_prefix: 'ctrl+alt', // completed with 1-9 digits
+        permutation_modifier: 'shift', // Added to jump and navigation hotkeys for pane permutation
+        maximize: 'meta+enter'
+      },
+      showIndicators: false, // Show pane number
+      focusOnMouseHover: false,
+      inactivePaneOpacity: 0.4 // Set to 1 to disable inactive panes dimming
     }
 
   },
 
-  plugins: ['hyper-iceberg', 'hyperterm-overlay', 'hyper-opacity', ],
+  plugins: ['hyper-iceberg', 'hyperterm-overlay', 'hyper-opacity', "hyper-pane"],
   localPlugins: [],
 
 };
