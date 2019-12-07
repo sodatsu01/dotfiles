@@ -78,11 +78,28 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 inoremap { {}<ESC>i
 inoremap ( ()<ESC>i
 
+" markdown
+autocmd BufRead,BufNewFile *.md  set filetype=markdown
+nnoremap <silent> <C-p> :PrevimOpen<CR>  
+" 自動で折りたたまないようにする
+let g:vim_markdown_folding_disabled=1
+let g:previm_enable_realtime = 1
 " プラグイン
 runtime macros/matchit.vim
+
+" プラグイン(vim-plug)
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
-  " Plug 'HerringtonDarkholme/yats.vim'
   Plug 'leafgarland/typescript-vim'
   Plug 'maxmellon/vim-jsx-pretty'
+  Plug 'tpope/vim-markdown'
+  Plug 'kannokanno/previm'
+  Plug 'tyru/open-browser.vim'
 call plug#end()
+
