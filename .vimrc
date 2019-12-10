@@ -77,6 +77,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 閉じ括弧の補完
 inoremap { {}<ESC>i
 inoremap ( ()<ESC>i
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " markdown
 autocmd BufRead,BufNewFile *.md  set filetype=markdown
@@ -101,5 +102,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-markdown'
   Plug 'kannokanno/previm'
   Plug 'tyru/open-browser.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'mattn/emmet-vim'
+  Plug 'tpope/vim-surround'
 call plug#end()
 
