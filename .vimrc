@@ -88,6 +88,11 @@ let g:previm_enable_realtime = 1
 " プラグイン
 runtime macros/matchit.vim
 
+" atcoder用のディレクトリの設定
+if expand("%:p") =~ "atcoder"
+  :source ~/.vim/.vim/cmd/for_atcoder.vim
+endif
+
 " プラグイン(vim-plug)
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
