@@ -100,6 +100,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" NerdCommenter
+let g:NERDSpaceDelims=1
+let g:NERDDefaultAlign='left'
+
 call plug#begin('~/.vim/plugged')
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
@@ -110,5 +114,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'mattn/emmet-vim'
   Plug 'tpope/vim-surround'
+  Plug 'preservim/nerdcommenter'
 call plug#end()
 
