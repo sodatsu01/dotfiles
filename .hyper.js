@@ -54,7 +54,7 @@ module.exports = {
       primaryDisplay: false,
       resizable: true,
       startAlone: true,
-      startup: true,
+      startup: false,
       size: 1,
       tray: true,
       unique: false,
