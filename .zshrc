@@ -5,6 +5,7 @@
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
+export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 # rbenv
@@ -39,8 +40,8 @@ zstyle ':zle:*' word-style unspecified
 ########################################
 # 補完
 # 補完機能を有効にする
-autoload -Uz compinit
-compinit
+autoload -Uz compinit 
+compinit -u
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -172,4 +173,10 @@ case ${OSTYPE} in
         source ~/.zshrc.linux
         ;;
 esac
+
 # eval "$(rbenv init -)"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+# export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)" 
