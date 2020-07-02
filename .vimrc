@@ -70,6 +70,8 @@ hi Error cterm=bold ctermfg=255 ctermbg=9 guibg=Magenta
 hi MatchParen ctermfg=255 ctermbg=33
 
 " キーマップ
+" キャメルケースモーション
+
 " アクティブなファイルが含まれるディレクトリ展開
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%' 
 " ESC連打でハイライト解除
@@ -99,7 +101,7 @@ runtime macros/matchit.vim
 
 " atcoder用のディレクトリの設定
 if expand("%:p") =~ "atcoder"
-  :source ~/.vim/.vim/cmd/for_atcoder.vim
+  :source ~/.vim/cmd/for_atcoder.vim
 endif
 
 " プラグイン(vim-plug)
@@ -118,7 +120,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'tpope/vim-markdown'
-  Plug 'kannokanno/previm'
+  Plug 'previm/previm'
   Plug 'tyru/open-browser.vim'
   Plug 'scrooloose/nerdtree'
   Plug 'mattn/emmet-vim'
@@ -126,3 +128,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'preservim/nerdcommenter'
 call plug#end()
 
+:command! -nargs=0 Clip call Clip()
+function Clip()
+  :!cat % | pbcopy
+endfunction
