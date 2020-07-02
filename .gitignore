@@ -1,0 +1,4 @@
+.VimballRecord
+.vim/autoload/*
+.vim/doc/*
+.vim/plugin/*

@@ -2,3 +2,6 @@
 .DS_Store
 node_modules/*
 .gitignore
+.vscode
+db-volume
+.env
