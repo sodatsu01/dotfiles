@@ -96,6 +96,8 @@ nnoremap <silent> <C-p> :PrevimOpen<CR>
 let g:vim_markdown_folding_disabled=1
 let g:previm_enable_realtime = 1
 
+autocmd BufRead,BufNewFile *.go setlocal noet
+
 " プラグイン
 runtime macros/matchit.vim
 
