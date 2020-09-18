@@ -2,3 +2,4 @@
 .vim/autoload/*
 .vim/doc/*
 .vim/plugin/*
+.vim/plugged/*
