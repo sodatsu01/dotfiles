@@ -1,17 +1,22 @@
-# 少し凝った zshrc
-# License : MIT
-# http://mollifier.mit-license.org/
-
 ########################################
 # 環境変数
 export LANG=ja_JP.UTF-8
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 # rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then 
+else 
+  export PATH="$HOME/.rbenv/bin:$PATH"
+fi
+eval "$(rbenv init - --no-rehash)"; 
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+if which jenv > /dev/null; then 
+else 
+  export PATH="$HOME/.jenv/bin:$PATH"
+fi
+eval "$(jenv init - --no-rehash)" 
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
+export GOPATH=$HOME/gopath
 
 # 色を使用出来るようにする
 autoload -Uz colors
@@ -74,6 +79,7 @@ function _update_vcs_info_msg() {
 }
 add-zsh-hook precmd _update_vcs_info_msg
 
+# zmodload zsh/zprof && zprof
 
 ########################################
 # オプション
@@ -136,6 +142,8 @@ alias mkdir='mkdir -p'
 alias gs='git status'
 alias ga='git add .'
 alias gcm='git commit'
+
+alias kube='kubectl'
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
 
@@ -156,8 +164,6 @@ elif which putclip >/dev/null 2>&1 ; then
     alias -g C='| putclip'
 fi
 
-
-
 ########################################
 # OS 別の設定
 case ${OSTYPE} in
@@ -174,9 +180,3 @@ case ${OSTYPE} in
         ;;
 esac
 
-# eval "$(rbenv init -)"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-# export PATH="/usr/local/opt/openjdk/bin:$PATH"
-
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)" 
