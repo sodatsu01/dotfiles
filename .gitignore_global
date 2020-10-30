@@ -1,8 +1,13 @@
 *~
 .DS_Store
-node_modules/*
-.gitignore
+node_modules
 .vscode
 db-volume
 .env
 .java-version
+dist
+build
+bin
+.project
+.settings
+.classpath
